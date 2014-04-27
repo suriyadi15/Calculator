@@ -51,7 +51,7 @@ namespace Calculator
         public void convert()
         {
             string tmp = "";  //untuk tempat sementara bilangan
-            if (inp[0] != '(')
+            if (inp[0] != '(' && inp[0] != ')' && inp[0] == '^' && inp[0] == '*' && inp[0] == '/' && inp[0] == '+' && inp[0] == '-')
                 tmp += inp[0];
             else
                 arr.Add(inp[0]);
@@ -125,13 +125,21 @@ namespace Calculator
         }
         private void cekKali()  //Untuk mengecek input * mis 2(2-2), akan diubah menjadi 2*(2-2)
         {
-            for(int i=1;i<arr.Count;i++)
+            for (int i = 1; i < arr.Count; i++)
+            {
                 if (arr[i - 1].ToString() == "(" && arr[i].ToString() == ")")
                 {
                     cekError = false;
                     Console.WriteLine("Input False");
                     break;
                 }
+                else if (arr[i - 1].ToString() == ")" && arr[i].ToString() == "(")
+                {
+                    cekError = false;
+                    Console.WriteLine("Input False");
+                    break;
+                }
+            }
             if (cekError)
             {
                 int tmp = arr.IndexOf('(');
