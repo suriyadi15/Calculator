@@ -67,23 +67,20 @@ namespace Calculator
                 {
                     if (inp[i] == '^' || inp[i] == '*' || inp[i] == '/' || inp[i] == '+' || inp[i] == '(' || inp[i] == ')')
                     {
-                        try
+                        if (tmp != "")
                         {
-                            arr.Add(Convert.ToDouble(tmp));
-                        }
-                        catch (Exception)
-                        {
-                            cekError = false;
-                            break;
+                            try
+                            {
+                                arr.Add(Convert.ToDouble(tmp));
+                            }
+                            catch (Exception)
+                            {
+                                cekError = false;
+                                break;
+                            }
                         }
                         tmp = "";
-                        if (arr[arr.Count - 1].ToString() != "(" && arr[arr.Count - 1].ToString() != "^" && arr[arr.Count - 1].ToString() != "*" && arr[arr.Count - 1].ToString() != "/" && arr[arr.Count - 1].ToString() != "+" && arr[arr.Count - 1].ToString() != "-")
-                            arr.Add(inp[i]);
-                        else
-                        {
-                            cekError = false;
-                            break;
-                        }
+                        arr.Add(inp[i]);
                     }
                     else if (inp[i] == '-')
                     {
@@ -101,13 +98,7 @@ namespace Calculator
                                 break;
                             }
                             tmp = "";
-                            if (arr[arr.Count - 1].ToString() != "(" && arr[arr.Count - 1].ToString() != "^" && arr[arr.Count - 1].ToString() != "*" && arr[arr.Count - 1].ToString() != "/" && arr[arr.Count - 1].ToString() != "+" && arr[arr.Count - 1].ToString() != "-")
-                                arr.Add(inp[i]);
-                            else
-                            {
-                                cekError = false;
-                                break;
-                            }
+                            arr.Add(inp[i]);
                         }
                     }
                     else
