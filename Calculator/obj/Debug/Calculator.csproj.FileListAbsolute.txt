@@ -1,5 +1,6 @@
-E:\Kuliah\OOP\Praktek\Calculator\Calculator\bin\Debug\Calculator.exe.config
-E:\Kuliah\OOP\Praktek\Calculator\Calculator\bin\Debug\Calculator.exe
-E:\Kuliah\OOP\Praktek\Calculator\Calculator\bin\Debug\Calculator.pdb
-E:\Kuliah\OOP\Praktek\Calculator\Calculator\obj\Debug\Calculator.exe
-E:\Kuliah\OOP\Praktek\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\Github\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\Github\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\Github\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Github\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Github\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\Github\Calculator\Calculator\obj\Debug\Calculator.pdb
